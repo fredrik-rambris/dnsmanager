@@ -4,7 +4,6 @@ DNSManager by Fredrik Rambris <fredrik@rambris.com>
 License
 =======
 This software is copyright (c) 2011 Fredrik Rambris. All rights reserved.
-Source code available upon request.
 
 A web interface to all your DNS zones. The reason for its creation was that I
 became fed upp with editing zone files and configs manually. I created it for
