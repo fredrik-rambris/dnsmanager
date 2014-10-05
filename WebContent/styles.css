@@ -1,0 +1,127 @@
+body
+{
+	padding: 0;
+	margin: 0;
+	font-family: Verdana, sans-serif;
+	font-size: .83em;
+}
+
+#contents
+{
+	margin: .5em 1em;
+}
+
+#contents a:link, #contents a:visited
+{
+	color: #008;
+}
+
+#contents a:hover
+{
+	color: #00f;
+}
+
+#contents a:active
+{
+	color: #f00;
+}
+
+#toolbar { background: #ddd; padding: .5em; margin: 0; }
+#toolbar a { color: #00f; text-decoration: none; }
+#toolbar a:hover { text-decoration: underline; }
+ul#toolbar li { display: inline; margin: 0; padding-left: 1em;}
+
+fieldset
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+fieldset input, textarea
+{
+	border: solid 1px #ccc;
+	background: white;
+}
+
+label span
+{
+     font-weight: bold;
+}
+
+
+table.data
+{
+	border: dotted 1px #eee;
+}
+
+table.data tr:hover td, table.data tr:hover th
+{
+	background: #f0f0ff;
+}
+
+table.clickable tr:hover td
+{
+	cursor: pointer;
+}
+
+
+table.data td, table.data th
+{
+	padding: .2em .4em;
+	background: #eeeeee;
+	text-align: left;
+}
+
+table.data tr.dim td
+{
+	color: #aaa;
+}
+
+table.data tr.warn td
+{
+	color: #800;
+}
+
+label:hover
+{
+	background: #eee;
+}
+
+h2 span.domain
+{
+	color: #888;
+	font-weight: normal;
+}
+
+h1 { background: #000; color: #cff; margin: 0; padding: 0.5em 1em; }
+h1 span { font-size: 50%; }
+
+h1 a { text-decoration: inherit; color: inherit; }
+h1 a:hover { text-decoration: underline; }
+
+h4 { border-top: solid 1px #ccc; }
+
+ul#menu li { list-style: none; padding:.5em; margin: 0; float: left; text-align: center; border-left: 1px solid #888; border-right: 1px solid black; }
+ul#menu { list-style: none; margin:0; padding: 0; background: #444; overflow: auto; }
+ul#menu li.selected a { color: #fff; font-weight: bold; }
+ul#menu a { color: #99f; text-decoration: none; display: block; width: 6em; }
+ul#menu li:hover { background: #666; }
+
+table.layout { border-collapse; collapse; margin: 0; padding: 0; }
+table.layout > tbody > tr > td { vertical-align: top; }
+table.layout > tbody > tr > th { text-align: left; }
+
+.locRows { display: none; }
+#mxRow { display: none; }
+
+abbr { border-bottom: 1px dashed #666; }
+tr.inactive > td { color: #888; font-style: italic; }
+tr.inactive > td a { color: #aac !important; font-style: italic; }
+tr.strong > td { color: #000; font-weight: bold; }
+
+
+button { font-size: 80%; }
+
+#flash { border-bottom: 1px solid #880; background: #ff8; margin: 0 0; padding: .5em; } 
+#flash.error { border-bottom-color: #c00; background: #faa; }

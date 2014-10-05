@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<database>
+		<address>localhost</address>
+		<username>dnsmanager</username>
+		<password>d1b2_p3a4!!s5s6</password>
+		<name>dns</name>
+	</database>
+	<log_config>/home/...../DNSManager/logging.properties</log_config>
+	<zonefiles>/home/...../DNSManager/zones</zonefiles>
+	<configfiles>/home/...../DNSManager/configs</configfiles>
+</config>

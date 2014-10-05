@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>DNSManager</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>DNS Manager</description>
+    <display-name>dns</display-name>
+    <servlet-name>dns</servlet-name>
+    <servlet-class>com.rambris.dnsmanager.web.DNSServlet</servlet-class>
+    <init-param>
+      <description>Path to config file</description>
+      <param-name>configfile</param-name>
+      <param-value>/home/boost/Data/Coding/DNSManager/dnsmanager.xml</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dns</servlet-name>
+    <url-pattern>/overview</url-pattern>    
+    <url-pattern>/overview/*</url-pattern>    
+    <url-pattern>/server</url-pattern>
+    <url-pattern>/server/*</url-pattern>
+    <url-pattern>/group</url-pattern>
+    <url-pattern>/group/*</url-pattern>
+    <url-pattern>/domain</url-pattern>
+    <url-pattern>/domain/*</url-pattern>
+    <url-pattern>/owner</url-pattern>
+    <url-pattern>/owner/*</url-pattern>
+    <url-pattern>/report</url-pattern>
+    <url-pattern>/user</url-pattern>
+    <url-pattern>/user/*</url-pattern>
+    <url-pattern>/login</url-pattern>
+    <url-pattern>/logout</url-pattern>
+    <url-pattern>/password</url-pattern>
+    
+  </servlet-mapping>
+</web-app>

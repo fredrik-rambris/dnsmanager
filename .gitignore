@@ -1,0 +1,8 @@
+classes/*
+.svn
+.svn*
+dnsmanager.xml
+build
+configs
+zones
+deploy.sh
