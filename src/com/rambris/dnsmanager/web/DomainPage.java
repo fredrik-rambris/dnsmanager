@@ -394,17 +394,6 @@ public class DomainPage extends RestrictedPage
 					ARecord arecord = (ARecord) record;
 					reverse = arecord.getReverse(false);
 				}
-				if (record instanceof SRVRecord)
-				{
-					SRVRecord srv = (SRVRecord) record;
-					if (getParameter("service") != null) srv.setService(getParameter("service"));
-					if (getParameter("protocol") != null) srv.setProtocol(getParameter("protocol"));
-					if (getParameter("priority") != null) srv.setPriority(getIntegerParameter("priority"));
-					if (getParameter("weight") != null) srv.setWeight(getIntegerParameter("weight"));
-					if (getParameter("target") != null) srv.setTarget(getParameter("target"));
-					if (getParameter("port") != null) srv.setPort(getIntegerParameter("port"));
-
-				}
 				if (getParameter("name") != null) record.setName(getParameter("name"));
 				record.setActive(getBooleanParameter("active"));
 				if (getIntegerParameter("group_id") != -1)
@@ -429,6 +418,17 @@ public class DomainPage extends RestrictedPage
 
 					if (getParameter("alt") != null) loc.setAltitude(getFloatParameter("alt"));
 					if (getFloatParameter("hp") != -1 && getFloatParameter("vp") != -1) loc.setPrecision(getFloatParameter("hp"), getFloatParameter("vp"));
+				}
+				else if (record instanceof SRVRecord)
+				{
+					SRVRecord srv = (SRVRecord) record;
+					if (getParameter("service") != null) srv.setService(getParameter("service"));
+					if (getParameter("protocol") != null) srv.setProtocol(getParameter("protocol"));
+					if (getParameter("priority") != null) srv.setPriority(getIntegerParameter("priority"));
+					if (getParameter("weight") != null) srv.setWeight(getIntegerParameter("weight"));
+					if (getParameter("target") != null) srv.setTarget(getParameter("target"));
+					if (getParameter("port") != null) srv.setPort(getIntegerParameter("port"));
+
 				}
 				else
 				{

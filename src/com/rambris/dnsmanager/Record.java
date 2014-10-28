@@ -16,6 +16,8 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.log4j.Logger;
+
 import com.rambris.Database;
 import com.rambris.Util;
 
@@ -30,6 +32,7 @@ public abstract class Record
 	private static Pattern namePattern = Pattern.compile("^(.*)\\s+(\\d+)$");
 	private static Pattern dataPattern = Pattern.compile("^(\\d+)\\s+(.*)$");
 
+	private Logger log=Logger.getLogger(Record.class);
 	protected Database db;
 	protected int id;
 	protected int domainId;
