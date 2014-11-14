@@ -2,6 +2,7 @@
 package com.rambris.dnsmanager.web;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -73,7 +74,22 @@ public class ReportPage extends SuperAdminPage
 		}
 		domains.addAll(aliases);
 		Collections.sort(domains);
-		setAttribute("domains", domains);
-		sendDispatch("/domainReport.jsp");
+		String format=getParameter("format");
+		if("csv".equalsIgnoreCase(format))
+		{
+			response.setContentType("text/plain");
+			PrintWriter out=response.getWriter();
+			out.println("domain\tserver\towner");
+			for(Domain domain:domains)
+			{
+				out.println(domain.getName() + "\t" + (domain.getSoaRecord()!=null?domain.getSoaRecord().getHost():"") + "\t" + (domain.getSoaRecord()!=null?domain.getSoaRecord().getAdmin():"") );
+			}
+			return;
+		}
+		else
+		{
+			setAttribute("domains", domains);
+			sendDispatch("/domainReport.jsp");
+		}
 	}
 }
