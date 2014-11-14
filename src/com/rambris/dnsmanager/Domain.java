@@ -59,6 +59,8 @@ public class Domain implements Comparable<Domain>, Cloneable
 	private SOARecord soaRecord = null;
 	/** Used in UserPage */
 	private boolean selected;
+	/** Used in ReportPage */
+	private Domain parentDomain;
 
 	public Domain(Database db)
 	{
@@ -1189,6 +1191,22 @@ public class Domain implements Comparable<Domain>, Cloneable
 	public void setSelected(boolean selected)
 	{
 		this.selected = selected;
+	}
+
+	public Domain getParentDomain()
+	{
+		return parentDomain;
+	}
+
+	public void setParentDomain(Domain parentDomain)
+	{
+		this.parentDomain = parentDomain;
+	}
+	
+	public String getDomainName()
+	{
+		if(parentDomain!=null) return parentDomain.getName();
+		else return getName();
 	}
 
 }

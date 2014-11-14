@@ -62,6 +62,7 @@ public class ReportPage extends SuperAdminPage
 			for (String alias : domain.getAliases())
 			{
 				Domain aliasDomain = (Domain) domain.clone();
+				aliasDomain.setParentDomain(domain);
 				aliasDomain.setName(alias);
 				soaRecord = lookup.querySOA(aliasDomain);
 				if (soaRecord != null)

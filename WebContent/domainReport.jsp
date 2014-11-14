@@ -11,7 +11,7 @@
 <h2>Domain Report</h2>
 <table class="data">
 <c:forEach items="${domains}" var="domain">
-<tr><td>${domain.name}</td><td><c:if test="${domain.soaRecord != null}">${domain.soaRecord.host}</c:if></td><td><c:if test="${domain.soaRecord != null}">${domain.soaRecord.admin}</c:if></td></tr>
+<tr><td><a href="${root}/domain/${domain.domainName}">${domain.name}</a></td><td><c:if test="${domain.soaRecord != null}">${domain.soaRecord.host}</c:if></td><td><c:if test="${domain.soaRecord != null}">${domain.soaRecord.admin}</c:if></td></tr>
 </c:forEach>
 </table>
 </div>
