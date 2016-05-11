@@ -12,8 +12,8 @@
 <form method="post" action="${self}">
 <fieldset>
 <table class="layout">
-<tr><th>Name</th><td><input type="text" name="user_name" value="${user.name}" maxlength="64"></td></tr>
-<tr><th>Password</th><td><input type="text" name="password" maxlength="40"></td></tr>
+<tr><th>Name</th><td><input type="text" name="user_name" value="${user.name}" maxlength="64" autocomplete="off"></td></tr>
+<tr><th>Password</th><td><input type="text" name="password" maxlength="40" autocomplete="off"></td></tr>
 <tr><th>Superadmin</th><td><input type="checkbox" name="superadmin" value="1"<c:if test="${user.superAdmin}"> checked="checked"</c:if>></td></tr>
 </table>
 </fieldset>
